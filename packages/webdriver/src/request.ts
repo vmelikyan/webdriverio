@@ -47,7 +47,7 @@ export default class WebDriverRequest extends EventEmitter {
         throwHttpErrors: false
     }
 
-    constructor (method: string, endpoint: string, body: object, isHubCommand: boolean = false) {
+    constructor (method: string, endpoint: string, body: Record<string, unknown>, isHubCommand: boolean = false) {
         super()
         this.body = body
         this.method = method
@@ -129,6 +129,7 @@ export default class WebDriverRequest extends EventEmitter {
 
     private async _request (
         fullRequestOptions: got.Options,
+        // eslint-disable-next-line no-unused-vars
         transformResponse?: (response: got.Response, requestOptions: got.HTTPSOptions) => got.Response,
         totalRetryCount = 0,
         retryCount = 0

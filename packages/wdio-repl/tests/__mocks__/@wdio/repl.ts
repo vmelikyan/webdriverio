@@ -7,8 +7,10 @@ export default class WDIORepl {
     private _config: ReplConfig
     private _isCommandRunning = false
     private _replServer: repl.REPLServer | undefined
-    private _evalFn: (...args: [any]) => any
-    private _startFn: (...args: [any]) => any
+    // eslint-disable-next-line no-unused-vars
+    private _evalFn: (...args: any[]) => any
+    // eslint-disable-next-line no-unused-vars
+    private _startFn: (...args: any[]) => any
 
     constructor(config: ReplConfig) {
         this._config = Object.assign({

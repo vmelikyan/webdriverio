@@ -2,6 +2,7 @@ import { Options } from './types'
 
 interface Option {
     type: 'string' | 'number' | 'object' | 'boolean' | 'function'
+    // eslint-disable-next-line no-unused-vars
     validate?: (option: any) => boolean
     default?: any
     match?: RegExp

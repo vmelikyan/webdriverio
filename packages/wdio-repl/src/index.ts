@@ -60,6 +60,7 @@ export default class WDIORepl {
         )
     }
 
+    // eslint-disable-next-line no-unused-vars
     eval (cmd: string, context: vm.Context, filename: string, callback: (err: Error | null, result: any) => void) {
         if (this._isCommandRunning) {
             return
@@ -81,6 +82,7 @@ export default class WDIORepl {
         return this._runCmd(cmd, context, callback)
     }
 
+    // eslint-disable-next-line no-unused-vars
     private _runCmd (cmd: string, context: vm.Context, callback: (err: Error | null, result: any) => void) {
         try {
             const result = vm.runInContext(cmd, context)
@@ -91,6 +93,7 @@ export default class WDIORepl {
         }
     }
 
+    // eslint-disable-next-line no-unused-vars
     private _handleResult (result: any, callback: (err: Error | null, result: any) => void) {
         if (!result || typeof result.then !== 'function') {
             this._isCommandRunning = false

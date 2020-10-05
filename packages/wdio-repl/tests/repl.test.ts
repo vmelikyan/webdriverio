@@ -197,6 +197,7 @@ describe('start', () => {
     it('should allow run eval with own context', async () => {
         const config = {
             ...defaultArgs,
+            // eslint-disable-next-line no-unused-vars
             eval: jest.fn().mockImplementation(function (this: SomeContext) {
                 this.foo = 'foobar'
             })

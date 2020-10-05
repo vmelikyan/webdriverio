@@ -1,4 +1,3 @@
-// @ts-ignore
 import logger from '@wdio/logger'
 
 // @ts-ignore
@@ -15,8 +14,10 @@ const log = logger('webdriver')
 export default class WebDriver {
     static async newSession (
         options: Options = {},
+        // eslint-disable-next-line no-unused-vars
         modifier?: (...args: any[]) => any,
         userPrototype = {},
+        // eslint-disable-next-line no-unused-vars
         customCommandWrapper?: (...args: any[]) => any
     ) {
         const params: Options = validateConfig(DEFAULTS, options)
@@ -57,8 +58,10 @@ export default class WebDriver {
      */
     static attachToSession (
         options?: AttachOptions,
+        // eslint-disable-next-line no-unused-vars
         modifier?: (...args: any[]) => any,
         userPrototype = {},
+        // eslint-disable-next-line no-unused-vars
         commandWrapper?: (...args: any[]) => any
     ) {
         if (!options || typeof options.sessionId !== 'string') {
